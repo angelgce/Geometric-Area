@@ -6,7 +6,7 @@ namespace Calculator_StrategyPattern
 {
     class Circle : AreaInterface
     {
-        private List<double> values = new List<double>();
+        private List<double> values = new List<double>(); //Same as triangle 
         private double result;
         public Circle(List<double> values) => this.values = values;
         public void calculateArea() => result = values.Aggregate((x, y) =>  Math.Pow(x ,2)*y);
