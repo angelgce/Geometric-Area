@@ -44,7 +44,7 @@ namespace Calculator_StrategyPattern
             values_box.ForEach(box =>
             {
                 if (box.IsEnabled && box.Text.Length != 0) { isCorrect = true; }
-                else if (box.IsEnabled) { isCorrect = false; }//if we need the value of this box, and this is not empty we will take it value
+                else if (box.IsEnabled) { isCorrect = false; } else if (!box.IsEnabled) { box.Text = ""; }//if we need the value of this box, and this is not empty we will take it value
             });
 
             if (index == 4 && isCorrect)//if the operation is of a regular polygon
